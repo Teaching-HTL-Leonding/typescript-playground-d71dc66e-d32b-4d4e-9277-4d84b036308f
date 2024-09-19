@@ -13,7 +13,7 @@ function setup()
   noFill()
 
   // Fill color
-  stroke("skyblue");
+  stroke("blue");
   circle(100, 100, 100)
 
   // Fill color
