@@ -1,19 +1,17 @@
 function setup() {
-    createCanvas (500,800);
+    createCanvas(500, 500);
     background("skyblue");
 
     fill("lightgrey");
-    circle(200, 200, 200);
+    circle(200, 200, 250);
 
     fill("black");
-    circle(150, 160, 30);
+    circle(150, 150, 40);
 
     fill("black");
-    circle(250, 160, 30);
+    circle(250, 150, 40);
 
-    line(180, 220, 140, 200);
+    fill("pink");
+    triangle(150, 210, 215, 160, 280, 210);
 
-    line(180, 230, 110, 230);
-
-    line(150, 150, 70, 200);
 }
