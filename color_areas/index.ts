@@ -23,7 +23,7 @@ function draw() {
     }
 }
 
-let message: string | null = null;
+let message: string = "";
 
 function mousePressed() {
     if (mouseX < 133.33) {
