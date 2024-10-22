@@ -16,6 +16,7 @@ function setup(): void {
     text("Computer:", TEXT_LEFT, 250);
     textSize(75);
    textSize(75);
+   // Auf Windows 10 ist der stein als emoji nicht verfügbar
     text("S", STONE_LEFT, 150);
     text("📃", PAPER_LEFT, 150);
     text("✂️", SCISSORS_LEFT, 150);
