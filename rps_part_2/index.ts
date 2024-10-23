@@ -15,6 +15,8 @@ function setup() {
     textSize(30);
     text("Human:", TEXT_LEFT, 50);
 
+    text("Computer:", TEXT_LEFT, 250);
+
 
     textSize(75);
     text("🪨", STONE_LEFT, HUMAN_SYMBOLS_TOP);
