@@ -12,14 +12,18 @@ function setup() {
     fill("white");
     strokeWeight(3);
     rect(30, 30, 250, 50);
-    line(0, 100, 300, 100);
-    line(0, 200, 500, 200);
-    line(0, 300, 700, 300);
-    line(100, 300, 100, 100);
-    line(200, 450, 200, 100);
-    strokeWeight(100)
+    line(0, lineHeight, width, lineHeight);
+    line(0, lineHeight*2, width, lineHeight*2);
+    line(0, lineHeight*3, width, lineHeight*3);
+    line(0, lineHeight*4, width, lineHeight*4);
+    line(cellWidth, lineHeight, cellWidth, lineHeight*4);
+    line(cellWidth*2, lineHeight, cellWidth*2, lineHeight*5);
     fill("black");
-    text("1", 100, 150, 200);
+    
+    text("7", 50, 130, 200);
+    text("8", 150, 130, 200);
+    text("9", 250, 130, 200);
+    text("6", 250, 220, 100)
 }
 
 function draw() {
