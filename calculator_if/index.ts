@@ -11,7 +11,7 @@ function setup() {
     cellWidth = width / 3;
     fill("white");
     strokeWeight(3);
-    rect(30, 30, 250, 50);
+    rect(10, 10, width - 20, lineHeight - 20);
     line(0, lineHeight, width, lineHeight);
     line(0, lineHeight * 2, width, lineHeight * 2);
     line(0, lineHeight * 3, width, lineHeight * 3);
@@ -20,26 +20,41 @@ function setup() {
     line(cellWidth * 2, lineHeight, cellWidth * 2, lineHeight * 5);
     fill("black");
     textSize(75);
-    text("7", 30, 100, 200);
-    text("8", 130, 100, 200);
-    text("9", 230, 100, 200);
-    text("6", 230, 200, 200);
-    text("5", 130, 200, 100);
-    text("4", 30, 200, 100);
-    text("3", 230, 280, 150);
-    text("2", 130, 280, 150);
-    text("1", 30, 280, 150);
-    text("0", 80, 380, 200);
-    text("C", 230, 380, 200);
+    text("7", cellWidth / 4, lineHeight * 1.8);
+    text("8", cellWidth / 0.8, lineHeight * 1.8);
+    text("9", cellWidth / 0.45, lineHeight * 1.8);
+    text("6", cellWidth / 4, lineHeight * 2.8);
+    text("5", cellWidth / 0.8, lineHeight * 2.8);
+    text("4", cellWidth / 0.45, lineHeight * 2.8);
+    text("3", cellWidth / 4, lineHeight * 3.8);
+    text("2", cellWidth / 0.8, lineHeight * 3.8);
+    text("1", cellWidth / 0.45, lineHeight * 3.8);
+    text("0", cellWidth / 1.2, lineHeight * 4.8);
+    text("C", cellWidth / 0.45, lineHeight * 4.8);
 
 }
 
 function draw() {
 
-
-    // <<< Add code here
 }
-
 function mouseClicked() {
-    // <<< Add code here
+    if (mouseX > 0 && mouseX < cellWidth
+        && mouseY > lineHeight && mouseY < lineHeight * 2) {
+        num = 7
+    }
+
+
+    if (mouseX > cellWidth && mouseX < cellWidth*2
+        && mouseY > lineHeight && mouseY < lineHeight * 2) {
+        num = 8
+    }
+    textSize(40);
+    textAlign(CENTER, CENTER);
+    text(num, width / 2, lineHeight / 2);
+
+    
 }
+
+
+
+
