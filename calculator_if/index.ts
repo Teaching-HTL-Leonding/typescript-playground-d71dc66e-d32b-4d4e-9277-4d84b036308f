@@ -62,11 +62,11 @@ function mouseClicked() {
     }
 
     if(mouseX > cellWidth/3 && cellWidth/4 &&
-    mouseY > lineHeight/3 && mouseY*4){
+    mouseY > lineHeight/3 && mouseY < lineHeight*4){
         num=5
     }
 
-    if()
+
 
     textSize(40);
     textAlign(CENTER, CENTER);
