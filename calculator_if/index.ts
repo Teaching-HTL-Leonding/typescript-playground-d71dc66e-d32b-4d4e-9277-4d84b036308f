@@ -43,13 +43,12 @@ function draw() {
 function mouseClicked() {
     if (mouseX > 0 && mouseX < cellWidth
         && mouseY > lineHeight && mouseY < lineHeight * 2) {
-        num = 7
+        num = 7;
     }
-
 
     if (mouseX > cellWidth && mouseX < cellWidth * 2
         && mouseY > lineHeight && mouseY < lineHeight * 2) {
-        num = 8
+        num = 8;
     }
 
     if (mouseX > cellWidth * 2 && mouseX < width
@@ -57,19 +56,19 @@ function mouseClicked() {
         num = 9;
     }
 
-    if ( mouseX > 0 && mouseX < width/2 &&
-    mouseY > lineHeight/2 && lineHeight/4 ){
-        num = 6
+    if (mouseX > 0 && mouseX < cellWidth &&
+        mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
+        num = 6;
     }
 
-    if ( mouseX > cellWidth/2 && mouseX < cellWidth/4
-    && mouseY > lineHeight/2 && mouseY < lineHeight/4){
-        num = 5
+    if(mouseX > cellWidth/3 && cellWidth/4 &&
+    mouseY > lineHeight/3 && mouseY*4){
+        num=5
     }
+
+    if()
 
     textSize(40);
     textAlign(CENTER, CENTER);
     text(num, width / 2, lineHeight / 2);
-
-
 }
