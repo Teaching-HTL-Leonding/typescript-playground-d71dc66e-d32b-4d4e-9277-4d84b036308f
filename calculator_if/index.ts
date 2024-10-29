@@ -4,6 +4,9 @@ let num: number = 0;
 let lineHeight: number = 0;
 let cellWidth: number = 0;
 
+//cellWidth=breite
+//lineHeight=länge
+
 function setup() {
     createCanvas(300, 450);
     background("lightgray");
@@ -44,17 +47,29 @@ function mouseClicked() {
     }
 
 
-    if (mouseX > cellWidth && mouseX < cellWidth*2
+    if (mouseX > cellWidth && mouseX < cellWidth * 2
         && mouseY > lineHeight && mouseY < lineHeight * 2) {
         num = 8
     }
+
+    if (mouseX > cellWidth * 2 && mouseX < width
+        && mouseY > lineHeight && mouseY < lineHeight * 2) {
+        num = 9;
+    }
+
+    if ( mouseX > 0 && mouseX < width/2 &&
+    mouseY > lineHeight/2 && lineHeight/4 ){
+        num = 6
+    }
+
+    if ( mouseX > cellWidth/2 && mouseX < cellWidth/4
+    && mouseY > lineHeight/2 && mouseY < lineHeight/4){
+        num = 5
+    }
+
     textSize(40);
     textAlign(CENTER, CENTER);
     text(num, width / 2, lineHeight / 2);
 
-    
+
 }
-
-
-
-
