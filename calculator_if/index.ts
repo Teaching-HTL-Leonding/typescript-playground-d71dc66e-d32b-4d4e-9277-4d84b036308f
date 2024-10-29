@@ -61,11 +61,15 @@ function mouseClicked() {
         num = 6;
     }
 
-    if(mouseX > cellWidth/3 && cellWidth/4 &&
+    if(mouseX > cellWidth/2 && cellWidth/3 &&
     mouseY > lineHeight/3 && mouseY < lineHeight*4){
         num=5
     }
 
+    if(mouseX > cellWidth/3 && mouseX < cellWidth/4
+    && mouseY > lineHeight*4 && mouseY < lineHeight/4 ){
+        num = 4
+    }
 
 
     textSize(40);
