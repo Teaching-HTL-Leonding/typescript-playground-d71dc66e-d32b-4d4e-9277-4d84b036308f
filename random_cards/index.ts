@@ -1,53 +1,55 @@
-let cardImage: p5.Image;
+let cardImage: p5.Image; // Variable für das Kartenbild
+const BASE_URL: string = 'https://cddataexchange.blob.core.windows.net/images/cards';
 
-const BASE_URL = 'https://cddataexchange.blob.core.windows.net/images/cards';
+function preload(): void {
+  const colorIx: number = Math.floor(random(0, 4));
 
-function preload() {
-  const colorIx = Math.floor(random(0, 4));
-
-  const cardIx = Math.floor(random(1, 14));
+  const cardIx: number = Math.floor(random(1, 14));
 
   let color: string;
   let rank: string;
 
+
   switch (colorIx) {
     case 0:
-      color = "clubs";
+      color = 'clubs';
       break;
     case 1:
-      color = "diamonds";
+      color = 'diamonds';
       break;
     case 2:
-      color = "hearts";
+      color = 'hearts';
       break;
-      case 3: 
-      color = "spades";
+    case 3:
+      color = 'spades';
       break;
-      default:
-      color = "clubs";
-
+    default:
+      color = 'clubs';
   }
-switch (cardIx) {
-  case 1:
-    rank = 'A'; // Ace
-    break;
-  case 11:
-    rank = 'J'; // Jack
-    break;
-  case 12:
-    rank = 'Q'; // Queen
-    break;
-  case 13:
-    rank = 'K'; // King
-    break;
-  default:
-    rank = cardIx.toString(); 
-}
-const cardURL: string = `${BASE_URL}/${color}/${rank}.png`;
 
+  switch (cardIx) {
+    case 1:
+      rank = 'A';
+      break;
+    case 11:
+      rank = 'J';
+      break;
+    case 12:
+      rank = 'Q';
+      break;
+    case 13:
+      rank = 'K';
+      break;
+    default:
+      rank = cardIx.toString(); // Für die Zahlen 2 bis 10
+  }
+
+  const cardURL: string = `${BASE_URL}/${color}/${rank}.png`;
+
+  cardImage = loadImage(cardURL);
 }
 
-function setup() {
+function setup(): void {
   createCanvas(250, 250);
   background("darkgreen");
 
