@@ -1,4 +1,4 @@
-let cardImage: p5.Image; // Variable für das Kartenbild
+let cardImage: p5.Image;
 const BASE_URL: string = 'https://cddataexchange.blob.core.windows.net/images/cards';
 
 function preload(): void {
