@@ -52,16 +52,16 @@ function mouseClicked() {
     }
 
     if (mouseX > cellWidth * 2 && mouseX < width
-        && mouseY > lineHeight && mouseY < lineHeight * 2) {
+        && mouseY > lineHeight*2 && mouseY < lineHeight * 2) {
         num = 9;
     }
 
     if (mouseX > 0 && mouseX < cellWidth &&
-        mouseY > lineHeight * 2 && mouseY < lineHeight * 3) {
+        mouseY > lineHeight / 2 && mouseY < lineHeight / 3) {
         num = 6;
     }
 
-    if(mouseX > cellWidth/2 && cellWidth/3 &&
+    if(mouseX > cellWidth*2 && cellWidth*3 &&
     mouseY > lineHeight/3 && mouseY < lineHeight*4){
         num=5
     }
