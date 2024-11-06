@@ -1,4 +1,6 @@
 const MARGIN_NUM = 10;
+// ich weiss da ses nicht responsiv ist aber es war zum üben
+//und ich hab ausversehn gespeichert :)
 
 let num: number = 0;
 let lineHeight: number = 0;
