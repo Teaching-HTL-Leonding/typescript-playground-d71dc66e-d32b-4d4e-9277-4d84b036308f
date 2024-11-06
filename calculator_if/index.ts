@@ -32,11 +32,12 @@ function setup() {
     text("0", 90, 460);
     text("C", 235, 460);
     fill("white");
-    rect(30, 20, 230, 50);
+    rect(30, 30, 230, 50);
     let zahlsieben: number = 7;
 }
 
 function mouseClicked() {
+    textAlign(RIGHT, CENTER);
     // tip für mich: alle  Y koordinaten müssen einfach
      //+100 gerechnet wereden
     if (mouseX > 0 && mouseX < 100 &&
@@ -70,7 +71,30 @@ function mouseClicked() {
         text("6", 230, 60);
     }
     if(mouseX > 0 && mouseX < 100 
-    && mouseY > )
+    && mouseY > 300 && mouseY < 400){
+        fill("black");
+        text("1", 230, 60);
+    }
+    if(mouseX > 100 && mouseX < 200
+    && mouseY > 300 && mouseY < 400){
+        fill("black");
+        text("2", 230, 60);
+    }
+        if(mouseX > 200 && mouseX < 300 
+    && mouseY > 300 && mouseY < 400){
+        fill("black");
+        text("3", 230, 60);
+    }
+if(mouseX > 0 && mouseX < 200 
+    && mouseY > 400 && mouseY < 500){
+        fill("black");
+        text("0", 230, 60);
+    }
+            if(mouseX > 200 && mouseX < 300 
+    && mouseY > 400 && mouseY < 500){
+        fill("white");
+        rect(30, 30, 230, 50);
+    }
 
 
 }
