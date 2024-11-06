@@ -8,83 +8,67 @@ function setup() {
     createCanvas(300, 500);
     lineHeight = height / 5;
     cellWidth = width / 3;
-}
-
-function draw() {
     background("lightgray");
-
-    noStroke();
-    fill("white");
-    rect(MARGIN_NUM, MARGIN_NUM, width - 2 * MARGIN_NUM, lineHeight - 2 * MARGIN_NUM);
-
-    stroke("black");
-    fill("black");
-    strokeWeight(2);
+    strokeWeight(3);
+    // die zwei linien
+    line(200, 500, 200, 100);
+    line(100, 400, 100, 100);
+    //linien von links nach rechts
+    line(0, 100, 300, 100);
+    line(0, 200, 300, 200);
+    line(0, 300, 300, 300);
+    line(0, 400, 300, 400);
     textSize(50);
-
-    textAlign(RIGHT, CENTER);
-    text(num, width - MARGIN_NUM * 2, lineHeight / 2);
-
-    textAlign(CENTER, CENTER);
-
-    let y = lineHeight * 1;
-    line(0, y, width, y);
-    text('7', width / 3 * 0 + cellWidth / 2, y + lineHeight / 2);
-    text('8', width / 3 * 1 + cellWidth / 2, y + lineHeight / 2);
-    text('9', width / 3 * 2 + cellWidth / 2, y + lineHeight / 2);
-
-    y += lineHeight;
-    line(0, y, width, y);
-    text('4', width / 3 * 0 + cellWidth / 2, y + lineHeight / 2);
-    text('5', width / 3 * 1 + cellWidth / 2, y + lineHeight / 2);
-    text('6', width / 3 * 2 + cellWidth / 2, y + lineHeight / 2);
-
-    y += lineHeight;
-    line(0, y, width, y);
-    text('1', width / 3 * 0 + cellWidth / 2, y + lineHeight / 2);
-    text('2', width / 3 * 1 + cellWidth / 2, y + lineHeight / 2);
-    text('3', width / 3 * 2 + cellWidth / 2, y + lineHeight / 2);
-
-    y += lineHeight;
-    line(0, y, width, y);
-    text('0', cellWidth, y + lineHeight / 2);
-    text('C', cellWidth * 2.5, y + lineHeight / 2);
-    
-    let x = cellWidth * 1;
-    line(x, lineHeight, x, height - lineHeight);
-
-    x += cellWidth;
-    line(x, lineHeight, x, height);
+    fill("black");
+    text("7", 35, 160);
+    text("8", 135, 160);
+    text("9", 235, 160);
+    text("4", 35, 260);
+    text("5", 135, 260);
+    text("6", 235, 260);
+    text("1", 35, 360);
+    text("2", 135, 360);
+    text("3", 235, 360);
+    text("0", 90, 460);
+    text("C", 235, 460);
+    fill("white");
+    rect(30, 20, 230, 50);
+    let zahlsieben: number = 7;
 }
 
 function mouseClicked() {
-  if (mouseY > lineHeight && mouseY <= height && mouseX >= 0 && mouseX <= width) {
-    const clickedY = Math.floor((mouseY - lineHeight) / lineHeight);
-    const clickedX = Math.floor(mouseX / cellWidth);
-    
-    let digit: number = -1;
-    if (clickedY === 0) {
-        if (clickedX === 0) { digit = 7; }
-        else if (clickedX === 1) { digit = 8; }
-        else if (clickedX === 2) { digit = 9; }
-    } else if (clickedY === 1) {
-        if (clickedX === 0) { digit = 4; }
-        else if (clickedX === 1) { digit = 5; }
-        else if (clickedX === 2) { digit = 6; }
-    } else if (clickedY === 2) {
-        if (clickedX === 0) { digit = 1; }
-        else if (clickedX === 1) { digit = 2; }
-        else if (clickedX === 2) { digit = 3; }
-    } else if (clickedX !== 2) { digit = 0; }
-
-    if (digit === -1) {
-        num = 0;
-    } else {
-        const oldNum = num;
-        num = num * 10 + digit;
-        if (num >= 1000000000) {
-            num = oldNum;
-        }
+    if (mouseX > 0 && mouseX < 100 &&
+        mouseY > 100 && mouseY < 200) {
+        fill("black");
+        text("7", 230, 60);
     }
-  }
+    if (mouseX > 100 && mouseX < 200
+        && mouseY > 100 && mouseY <200) {
+        fill("black");
+        text("8", 230, 60);
+    }
+    if (mouseX > 200 && mouseX < 300
+    && mouseY > 100 && mouseY < 200){
+        fill("black");
+        text("9", 230, 60);
+    }
+    if( mouseX > 0 && mouseX < 100 
+    && mouseY > 200 && mouseY < 300){
+        fill("black");
+        text("4", 230, 60);
+    }
+    if(mouseX > 100 && mouseX < 200
+    && mouseY > 200 && mouseY < 300){
+        fill("black");
+        text("5", 230, 60);
+    }
+    if(mouseX > 200 && mouseX < 300 
+    && mouseY > 200 && mouseY < 300){
+        fill("black");
+        text("6", 230, 60);
+    }
+    if(mouseX > 0 && mouseX < 100 
+    && mouseY > )
+
+
 }
