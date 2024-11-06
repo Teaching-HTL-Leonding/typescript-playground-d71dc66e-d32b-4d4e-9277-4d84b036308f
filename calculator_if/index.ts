@@ -33,67 +33,70 @@ function setup() {
     text("C", 235, 460);
     fill("white");
     rect(30, 30, 230, 50);
-    let zahlsieben: number = 7;
+    fill("black");
+    text("0", 230, 70);
 }
 
 function mouseClicked() {
     textAlign(RIGHT, CENTER);
     // tip für mich: alle  Y koordinaten müssen einfach
-     //+100 gerechnet wereden
+    //+100 gerechnet wereden
     if (mouseX > 0 && mouseX < 100 &&
         mouseY > 100 && mouseY < 200) {
         fill("black");
         text("7", 230, 60);
     }
     if (mouseX > 100 && mouseX < 200
-        && mouseY > 100 && mouseY <200) {
+        && mouseY > 100 && mouseY < 200) {
         fill("black");
         text("8", 230, 60);
     }
     if (mouseX > 200 && mouseX < 300
-    && mouseY > 100 && mouseY < 200){
+        && mouseY > 100 && mouseY < 200) {
         fill("black");
         text("9", 230, 60);
     }
-    if( mouseX > 0 && mouseX < 100 
-    && mouseY > 200 && mouseY < 300){
+    if (mouseX > 0 && mouseX < 100
+        && mouseY > 200 && mouseY < 300) {
         fill("black");
         text("4", 230, 60);
     }
-    if(mouseX > 100 && mouseX < 200
-    && mouseY > 200 && mouseY < 300){
+    if (mouseX > 100 && mouseX < 200
+        && mouseY > 200 && mouseY < 300) {
         fill("black");
         text("5", 230, 60);
     }
-    if(mouseX > 200 && mouseX < 300 
-    && mouseY > 200 && mouseY < 300){
+    if (mouseX > 200 && mouseX < 300
+        && mouseY > 200 && mouseY < 300) {
         fill("black");
         text("6", 230, 60);
     }
-    if(mouseX > 0 && mouseX < 100 
-    && mouseY > 300 && mouseY < 400){
+    if (mouseX > 0 && mouseX < 100
+        && mouseY > 300 && mouseY < 400) {
         fill("black");
         text("1", 230, 60);
     }
-    if(mouseX > 100 && mouseX < 200
-    && mouseY > 300 && mouseY < 400){
+    if (mouseX > 100 && mouseX < 200
+        && mouseY > 300 && mouseY < 400) {
         fill("black");
         text("2", 230, 60);
     }
-        if(mouseX > 200 && mouseX < 300 
-    && mouseY > 300 && mouseY < 400){
+    if (mouseX > 200 && mouseX < 300
+        && mouseY > 300 && mouseY < 400) {
         fill("black");
         text("3", 230, 60);
     }
-if(mouseX > 0 && mouseX < 200 
-    && mouseY > 400 && mouseY < 500){
+    if (mouseX > 0 && mouseX < 200
+        && mouseY > 400 && mouseY < 500) {
         fill("black");
         text("0", 230, 60);
     }
-            if(mouseX > 200 && mouseX < 300 
-    && mouseY > 400 && mouseY < 500){
+    if (mouseX > 200 && mouseX < 300
+        && mouseY > 400 && mouseY < 500) {
         fill("white");
         rect(30, 30, 230, 50);
+        fill("black");
+         text("0", 230, 60);
     }
 
 
