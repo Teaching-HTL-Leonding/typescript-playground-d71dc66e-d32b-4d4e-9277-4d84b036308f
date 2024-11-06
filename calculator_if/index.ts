@@ -37,6 +37,8 @@ function setup() {
 }
 
 function mouseClicked() {
+    // tip für mich: alle  Y koordinaten müssen einfach
+     //+100 gerechnet wereden
     if (mouseX > 0 && mouseX < 100 &&
         mouseY > 100 && mouseY < 200) {
         fill("black");
