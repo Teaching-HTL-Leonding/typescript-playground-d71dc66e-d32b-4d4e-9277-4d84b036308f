@@ -2,7 +2,7 @@ function setup() {
     createCanvas(400, 400);
     background("black");
 
-    const num1 = Math.floor(random(1, 101));
+    let num1 = Math.floor(random(1, 101));
     const num2 = Math.floor(random(1, 101));
     const num3 = Math.floor(random(1, 101));
     const num4= Math.floor (random(1, 101));
@@ -35,7 +35,12 @@ function setup() {
         fill("yellow")
         text("-", 190, 90)
     }
-   
+   if(position===0){
+    num1=answer
+   }
+   else if(position===1){
+    num2=answer
+   }
     
 
     text(num1, 50, 230);
