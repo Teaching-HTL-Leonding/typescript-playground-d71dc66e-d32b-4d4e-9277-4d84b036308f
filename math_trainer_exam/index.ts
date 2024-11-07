@@ -1,15 +1,24 @@
+let num1=0
+let num2=0
+let num3=0
+let answer=0
+const position= Math.floor(random(0, 3));
+
 function setup() {
     createCanvas(400, 400);
     background("black");
 
-    let num1 = Math.floor(random(1, 101));
-    let num2 = Math.floor(random(1, 101));
-    let num3 = Math.floor(random(1, 101));
+    num1 = Math.floor(random(1, 101));
+    num2 = Math.floor(random(1, 101));
+    num3 = Math.floor(random(1, 101));
     const num4= Math.floor (random(1, 101));
     const num5= Math.floor (random(1, 101));
     const operator= Math.floor(random(0, 3));
-    let answer=0 
+     
     const position= Math.floor(random(0, 3));
+    noFill();
+    stroke("yellow")
+   
     
 
     textSize(50);
@@ -53,6 +62,30 @@ function setup() {
 
 
 function mouseClicked() {
+
+    if(mouseX >50 && mouseX <100 
+    &&mouseY > 170 && mouseY < 250)
+    if(num1===answer){
+        textSize(50);
+        fill("yellow");
+        text(`${num1}ist richtig`,180, 330 );
+    }
+
+    if(mouseX >170 && mouseX <250 
+    &&mouseY > 170 && mouseY < 250)
+    if(num2===answer){
+        textSize(50);
+        fill("yellow");
+        text(`${num2}ist richtig`,50, 100 );
+    }
+    
+    if(mouseX >290 && mouseX <370 
+    &&mouseY > 170 && mouseY < 250)
+    if(num3===answer){
+        textSize(50);
+        fill("yellow");
+        text(`${num3}ist richtig`,180, 330 );
+    }
 
 }
 
