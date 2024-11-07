@@ -6,6 +6,8 @@ let num: number = 0;
 let lineHeight: number = 0;
 let cellWidth: number = 0;
 
+let inpout= 0
+
 function setup() {
     createCanvas(300, 500);
     lineHeight = height / 5;
@@ -36,7 +38,8 @@ function setup() {
     fill("white");
     rect(30, 30, 230, 50);
     fill("black");
-    text("0", 230, 70);
+    
+    text(`${inpout}`, 230, 50);
 }
 
 function mouseClicked() {
@@ -46,12 +49,14 @@ function mouseClicked() {
     if (mouseX > 0 && mouseX < 100 &&
         mouseY > 100 && mouseY < 200) {
         fill("black");
-        text("7", 230, 60);
+       // text("7", 230, 60);
+       inpout = inpout *10+7
     }
     if (mouseX > 100 && mouseX < 200
         && mouseY > 100 && mouseY < 200) {
         fill("black");
-        text("8", 230, 60);
+        //text("8", 230, 60);
+        inpout= inpout*10+8
     }
     if (mouseX > 200 && mouseX < 300
         && mouseY > 100 && mouseY < 200) {
@@ -101,5 +106,8 @@ function mouseClicked() {
          text("0", 230, 60);
     }
 
+}
+function  draw () {
+    text(`${inpout}`, 230, 60);
 
 }
