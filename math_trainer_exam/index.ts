@@ -66,25 +66,28 @@ function mouseClicked() {
     if(mouseX >50 && mouseX <100 
     &&mouseY > 170 && mouseY < 250)
     if(num1===answer){
+        textAlign(CENTER, CENTER)
         textSize(50);
         fill("yellow");
-        text(`${num1}ist richtig`,180, 330 );
+        text(`${num1}ist richtig`,160, 290 );
     }
 
     if(mouseX >170 && mouseX <250 
     &&mouseY > 170 && mouseY < 250)
     if(num2===answer){
+        textAlign(CENTER, CENTER);
         textSize(50);
         fill("yellow");
-        text(`${num2}ist richtig`,50, 100 );
+        text(`${num2}ist richtig`,160, 290 );
     }
     
     if(mouseX >290 && mouseX <370 
     &&mouseY > 170 && mouseY < 250)
     if(num3===answer){
+        textAlign(CENTER, CENTER);
         textSize(50);
         fill("yellow");
-        text(`${num3}ist richtig`,180, 330 );
+        text(`${num3}ist richtig`,160, 290 );
     }
 
 }
