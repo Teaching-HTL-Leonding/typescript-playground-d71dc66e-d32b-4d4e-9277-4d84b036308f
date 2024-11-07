@@ -1,8 +1,10 @@
+// RS: Code not formatted before handing in!
+
 let num1=0
 let num2=0
 let num3=0
 let answer=0
-const position= Math.floor(random(0, 3));
+const position= Math.floor(random(0, 3)); // RS: random must not be called before setup
 
 function setup() {
     createCanvas(400, 400);
@@ -63,6 +65,7 @@ function setup() {
 
 function mouseClicked() {
 
+    // RS: if statement without {}
     if(mouseX >50 && mouseX <100 
     &&mouseY > 170 && mouseY < 250)
     if(num1===answer){
@@ -89,6 +92,8 @@ function mouseClicked() {
         fill("yellow");
         text(`${num3}ist richtig`,160, 290 );
     }
+
+    // RS: "wrong" messages missing
 
 }
 
