@@ -1,35 +1,17 @@
-function setup()
-{
-  // Create the Canvas 
-  // Parameters are width and height
-  createCanvas(500, 2400);
-
-  // Set background color ("lime")
-
-  // Set line color and thickness
-  stroke("white");
-  strokeWeight(8);
-
-  noFill()
-
-  // Fill color
+function setup() {
+  createCanvas(500, 500);
+  background("lightgray");
+  noFill();
+  strokeWeight(5);
   stroke("blue");
-  circle(100, 100, 100)
-
-  // Fill color
-  stroke("orange");
-  circle(150, 160, 100);
-
-  // Fill Color
-  stroke("darkred");
-  circle(210, 100, 100);
-
-  // Fill color
+  circle(150, 100, 90);
+  stroke("yellow");
+  circle(200, 150, 90);
+  stroke("black");
+  circle(250, 100, 90)
   stroke("green");
-  circle(260, 160, 100 )
-
-  // Fill color
-  stroke("red")
-  circle(320, 100, 100)
-
+  circle(300, 150, 90);
+  stroke("red");
+  circle(350, 100, 90);
 }
+
