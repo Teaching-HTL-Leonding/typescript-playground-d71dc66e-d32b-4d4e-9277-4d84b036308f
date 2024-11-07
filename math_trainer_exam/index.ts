@@ -3,8 +3,8 @@ function setup() {
     background("black");
 
     let num1 = Math.floor(random(1, 101));
-    const num2 = Math.floor(random(1, 101));
-    const num3 = Math.floor(random(1, 101));
+    let num2 = Math.floor(random(1, 101));
+    let num3 = Math.floor(random(1, 101));
     const num4= Math.floor (random(1, 101));
     const num5= Math.floor (random(1, 101));
     const operator= Math.floor(random(0, 3));
@@ -40,6 +40,9 @@ function setup() {
    }
    else if(position===1){
     num2=answer
+   }
+   else if( position===2){
+    num3=answer
    }
     
 
