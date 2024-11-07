@@ -6,9 +6,9 @@ function setup() {
     const num2 = Math.floor(random(1, 101));
     const num3 = Math.floor(random(1, 101));
     const num4= Math.floor (random(1, 101));
-    const num5= Math.floor (random(1, 100));
+    const num5= Math.floor (random(1, 101));
     const operator= Math.floor(random(0, 3));
-
+    let answer=0 
 
     textSize(50);
     fill("yellow");
@@ -18,16 +18,19 @@ function setup() {
     text(num4, 120, 100);
     text(num5, 220, 100);
     if( operator===1){
+        answer=num4*num5
         textSize(50);
         fill("yellow");
         text("*", 190, 100);
     }
     if( operator===2){
+        answer=num4+num5
         textSize(50);
         fill("yellow");
         text("+", 190, 100)
     }
     if( operator===0){
+        answer=num4-num5
         textSize(50);
         fill("yellow")
         text("-", 190, 90)
