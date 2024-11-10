@@ -10,7 +10,7 @@ function setup() {
     createCanvas(400, 400);
     background("black");
 
-    num1 = Math.floor(random(1, 101));
+    num1 = Math.floor(random(1, 101)); // RS: First minimum requirement solved
     num2 = Math.floor(random(1, 101));
     num3 = Math.floor(random(1, 101));
     const num4= Math.floor (random(1, 101));
@@ -28,6 +28,7 @@ function setup() {
   
     text(num4, 120, 100);
     text(num5, 220, 100);
+    // RS: Second minimum requirement solved with if statements
     if( operator===1){
         answer=num4*num5
         textSize(50);
@@ -66,6 +67,11 @@ function setup() {
 function mouseClicked() {
 
     // RS: if statement without {}
+    // RS: Format code before handing it in
+
+    // RS: Third minimum requirement solved. You did not implement the
+    //     case when the user clicks on a wrong answer. However, you showed
+    //     that you can correctly use if statements and therefore you reach 50%.
     if(mouseX >50 && mouseX <100 
     &&mouseY > 170 && mouseY < 250)
     if(num1===answer){
