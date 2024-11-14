@@ -1,19 +1,21 @@
-const SIZE = 400;
-const MARGIN = 25;
+const SIZE = 400; // Canvas size (square)
+const MARGIN = 25; // Margin between the edges and the rays.
+// This is also the distance between the rays.
 
 function setup() {
   createCanvas(SIZE, SIZE);
   background("black");
-  strokeWeight(1)
-
-  stroke("yellow");
-  let i = MARGIN;
-  while (i < SIZE-MARGIN) {
+    let i = MARGIN;
+  while (i <= SIZE - MARGIN) {
+    stroke("yellow");
     line(MARGIN, i, mouseX, mouseY);
     line(width - MARGIN, i, mouseX, mouseY);
 
-    i += MARGIN;
-  }
+    stroke("green");
+    line(i, MARGIN, mouseX, mouseY);
+    line(i, height - MARGIN, mouseX, mouseY);
+
+    i += MARGIN;}
 }
 
 function mouseMoved() {
@@ -21,4 +23,16 @@ function mouseMoved() {
   strokeWeight(2);
 
 
+  let i = MARGIN;
+  while (i <= SIZE - MARGIN) {
+    stroke("yellow");
+    line(MARGIN, i, mouseX, mouseY);
+    line(width - MARGIN, i, mouseX, mouseY);
+
+    stroke("green");
+    line(i, MARGIN, mouseX, mouseY);
+    line(i, height - MARGIN, mouseX, mouseY);
+
+    i += MARGIN;
+  }
 }
