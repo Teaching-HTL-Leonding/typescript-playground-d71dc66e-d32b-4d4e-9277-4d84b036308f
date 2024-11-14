@@ -185,7 +185,7 @@ function setup() {
     //14te line
     i = GRID;
     while (i < SIZE) {
-        line(25, 350, 325, 350);
+        line(25, 350, 350, 350);
         i += GRID;
     }
 
