@@ -7,11 +7,11 @@ function setup() {
   background("black");
     let i = MARGIN;
   while (i <= SIZE - MARGIN) {
-    colorMode(RGB);
+    stroke("yellow");
     line(MARGIN, i, mouseX, mouseY);
     line(width - MARGIN, i, mouseX, mouseY);
 
-    colorMode(HSB);
+    stroke("green");
     line(i, MARGIN, mouseX, mouseY);
     line(i, height - MARGIN, mouseX, mouseY);
 
@@ -25,11 +25,11 @@ function mouseMoved() {
 
   let i = MARGIN;
   while (i <= SIZE - MARGIN) {
-    colorMode(RGB);
+    stroke("yellow");
     line(MARGIN, i, mouseX, mouseY);
     line(width - MARGIN, i, mouseX, mouseY);
 
-    colorMode(HSB);
+    stroke("green");
     line(i, MARGIN, mouseX, mouseY);
     line(i, height - MARGIN, mouseX, mouseY);
 
