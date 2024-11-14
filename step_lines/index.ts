@@ -131,61 +131,61 @@ function setup() {
     //fünfte line
     i = GRID;
     while (i < SIZE) {
-        line(25, 125, 375, 125);
+        line(25, 125, 125, 125);
         i += GRID;
     } 
     //sechste line
     i = GRID;
     while (i < SIZE) {
-        line(25, 150, 375, 150);
+        line(25, 150, 150, 150);
         i += GRID;
     } 
     //siebte line
     i = GRID;
     while (i < SIZE) {
-        line(25, 175, 375, 175);
+        line(25, 175, 175, 175);
         i += GRID;
     } 
     //achte line
     i = GRID;
     while (i < SIZE) {
-        line(25, 200, 375, 200);
+        line(25, 200, 200, 200);
         i += GRID;
     } 
     //neunte line
     i = GRID;
     while (i < SIZE) {
-        line(25, 225, 375, 225);
+        line(25, 225, 225, 225);
         i += GRID;
     } 
     //10te line
     i = GRID;
     while (i < SIZE) {
-        line(25, 250, 375, 250);
+        line(25, 250, 250, 250);
         i += GRID;
     } 
     //11te line
     i = GRID;
     while (i < SIZE) {
-        line(25, 275, 375, 275);
+        line(25, 275, 275, 275);
         i += GRID;
     } 
     //12te line
     i = GRID;
     while (i < SIZE) {
-        line(25, 300, 375, 300);
+        line(25, 300, 300, 300);
         i += GRID;
     } 
     //13te line
     i = GRID;
     while (i < SIZE) {
-        line(25, 325, 375, 325);
+        line(25, 325, 325, 325);
         i += GRID;
     } 
     //14te line
     i = GRID;
     while (i < SIZE) {
-        line(25, 350, 375, 350);
+        line(25, 350, 325, 350);
         i += GRID;
     }
 
