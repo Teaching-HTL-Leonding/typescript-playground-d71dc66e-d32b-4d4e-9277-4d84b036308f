@@ -8,32 +8,29 @@ function setup() {
     strokeWeight(0.25);
     stroke("lightgray");
 
-    // Draw vertical lines
-    let i = GRID;
-    while (i < SIZE) {
+
+    for (let i = GRID; i < SIZE; i += GRID) {
         line(i, 0, i, SIZE);
-        i += GRID;
     }
 
-    i = GRID;
-    while (i < SIZE) {
-        line(0, i, SIZE, i);
-        i += GRID;
+    
+    for(let y=GRID; y < SIZE; y+= GRID) {
+        line(0, y, SIZE, y);
     }
 
     strokeWeight(2);
 
     stroke("yellow");
-    i = GRID;
-    while (i < SIZE) {
-        line(GRID, i, GRID * (i / GRID), i);
-        i += GRID;
+    
+    for (let j = GRID; j < SIZE; j += GRID) {
+        line(GRID, j, GRID * (j / GRID), j);
+        
     }
 
     stroke("red");
-    i = GRID;
-    while (i < SIZE) {
-        line(GRID * (i / GRID), i, SIZE - GRID, i);
-        i += GRID;
+    
+    for (let x = GRID; x< SIZE; x += GRID ) {
+        line(GRID * (x / GRID), x, SIZE - GRID, x);
+       
     }
 }
