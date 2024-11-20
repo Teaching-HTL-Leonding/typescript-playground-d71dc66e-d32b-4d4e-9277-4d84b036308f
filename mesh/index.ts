@@ -1,18 +1,26 @@
-const SIZE = 400;  // Canvas size (square)
-const MARGIN = 50; // Margin between the edges and the rays.
-                  // This is also the distance between the rays.
+const SIZE = 400;  
+const MARGIN = 50; 
+const COLOR_HUE_OFFSET = 60;
 
 function setup() {
   createCanvas(SIZE, SIZE);
   background("black");
 
   strokeWeight(1);
- 
+  colorMode(RGB);
 
-  let i=MARGIN;
-  while (i<MARGIN){
-    stroke("lime");
-    rect(50, MARGIN, i, SIZE);
-    i+=50;
+  let left = MARGIN;
+  let color = 0;
+  while (left <= SIZE - MARGIN) {
+    stroke(color, 100, 100);
+    let right = MARGIN;
+    while (right <= SIZE - MARGIN) {
+      line(MARGIN, left, width - MARGIN, right);
+      right += MARGIN;
+    }
+
+    left += MARGIN;
+    color = color + COLOR_HUE_OFFSET;
   }
 }
+
