@@ -5,20 +5,23 @@ function setup() {
     createCanvas(SIZE, SIZE);
     background("black");
 
-    noStroke();
-
-    let i= SQUARE_SIZE;
-    while(i<SIZE){
+    let i = SQUARE_SIZE;
+    while (i < 450) {
         fill("white");
-        rect(i, i, SIZE-100 , i-50);
-        i+= 50;
-    }
-     let x= SQUARE_SIZE;
-    while(x<SIZE){
-        fill("brown");
-        rect(x*2, x, SIZE-100, x-50);
+        rect(i * 2, SQUARE_SIZE * 2, SQUARE_SIZE, SQUARE_SIZE);
+        i += 50
 
-        x+= SIZE;
+        let x = SQUARE_SIZE;
+        while (x < 450) {
+            fill("white");
+            rect(x, SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+            x += SQUARE_SIZE * 2;
+        }
+        let y = SQUARE_SIZE;
+        while (y < 450) {
+            fill("brown");
+            rect(y * 2, SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+            y += SQUARE_SIZE;
+        }
     }
-  
 }
