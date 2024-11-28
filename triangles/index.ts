@@ -14,9 +14,9 @@ function setup() {
 
     for (let y = 0; y <= SIZE; y += HEIGHT) {
         push();
-        for (let x = 0; x <= SIZE; x += SIDE_LENGTH) {
+        for (let x = 0; x < SIZE; x += SIDE_LENGTH) {
             triangle(0, 0, SIDE_LENGTH / 2, -HEIGHT, SIDE_LENGTH, 0);
-            translate(SIDE_LENGTH, 0); // Move origin to the right
+            translate(SIDE_LENGTH, 0);
         }
 
       
