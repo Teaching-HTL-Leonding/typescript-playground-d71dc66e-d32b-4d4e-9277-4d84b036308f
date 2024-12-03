@@ -1,28 +1,16 @@
-let num1 = Math.floor(random(1, 101));
-let num2 = Math.floor(random(1, 101));
-let num3 = Math.floor(random(1, 101));
-let position = 0
-let answer = 0
-
 function setup() {
     createCanvas(500, 500);
-    background("black");
-    const erstezahl = Math.floor(random(1, 101));
-    const zweitezahl = Math.floor(random(1, 101));
-    let num1 = Math.floor(random(1, 101));
-    let num2 = Math.floor(random(1, 101));
-    let num3 = Math.floor(random(1, 101));
-    let position = 0
-    let answer = 0
-    fill("yellow");
-    textSize(50);
-    text(erstezahl, 100, 100);
-    text(zweitezahl, 300, 100);
-    text(num1, 50, 300);
-    text(num2, 200, 300);
-    text(num3, 350, 300);
-
-    
+    background("grey");
+    textSize(20);
+    text("Test 1", 25, 25);
+    text("Test 2", 100, 25);
+    text("Test 3", 175, 25);
 }
-
-
+function mouseMoved(){
+    if(mouseX< 25 && mouseX > 50 &&
+     mouseY < 25 && mouseY > 45){
+        stroke("black");
+        strokeWeight(10)
+        line(25, 25, 20, 20);
+    }
+}
