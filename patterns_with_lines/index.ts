@@ -2,7 +2,7 @@ function setup() {
     createCanvas(601, 301);
     background("black");
 
-    stroke("aqua");
+
     noStroke();
 
     textSize(50);
@@ -20,7 +20,7 @@ function mouseMoved() {
     strokeWeight(2);
 
     noFill();
-    stroke("aqua");
+    
 
 
 
@@ -49,6 +49,7 @@ function mouseMoved() {
     fill("white");
     stroke("white");
     text(`${mouseX} of 601`, 100, 290)
+  
 }
 
 
