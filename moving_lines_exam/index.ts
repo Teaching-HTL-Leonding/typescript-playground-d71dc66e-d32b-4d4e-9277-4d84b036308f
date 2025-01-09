@@ -7,7 +7,8 @@ let lineStartY: number[] = [];
 let lineEndX: number[] = [];
 let lineEndY: number[] = [];
 let lineColor: number[] = [];
-let lines = 1;
+let lines = 20;
+
 let lineStartDx: number[] = [];
 let lineStartDy: number[] = [];
 let lineEndDx: number[] = [];
@@ -21,7 +22,7 @@ function setup() {
 
 
 
-    for (let x = 0; x < 10; x++) {
+    for (let x = 0; x < lines; x++) {
         lineStartX.push(random(50, 450));
         lineStartY.push(random(50, 450));
         lineEndX.push(random(50, 450));
@@ -40,10 +41,6 @@ function setup() {
 function draw() {
     background("black");
 
-    strokeWeight(5)
-    stroke("black")
-    line(50, 0, 50, 50);
-
     strokeWeight(1);
     textSize(20);
     fill("white")
@@ -51,9 +48,10 @@ function draw() {
     fill("black");
     text("+", 25, 10, 0, 50);
     text("-", 70, 10, 0, 50);
-    fill("white");
-    rect(50, 100, 0, 50);
-    for (let i = 0; i < 20; i++) {
+   
+
+
+    for (let i = 0; i < lines; i++) {
         push();
         stroke(lineColor[i], 100, 100);
         strokeWeight(2);
@@ -82,29 +80,29 @@ function draw() {
     }
 }
 function mouseClicked() {
-        if (mouseX > 0 && mouseX < 50 && mouseY > 0 && mouseY < 50) {
-            lines = lines + 1
-            lineStartX.push(random(50, 450));
-            lineStartY.push(random(50, 450));
-            lineEndX.push(random(50, 450));
-            lineEndY.push(random(50, 450));
+    if (mouseX > 0 && mouseX < 50 && mouseY > 0 && mouseY < 50) {
+        lines = lines + 1
+        lineStartX.push(random(50, 450));
+        lineStartY.push(random(50, 450));
+        lineEndX.push(random(50, 450));
+        lineEndY.push(random(50, 450));
 
-            lineStartDx.push(random(0, 5));
-            lineStartDy.push(random(0, 5));
-            lineEndDx.push(random(0, 5));
-            lineEndDy.push(random(0, 5));
-        }
-        if (mouseX > 50 && mouseX < 100 && mouseY > 0 && mouseY < 50) {
-            lines = lines - 1
-            lineStartY
-            lineStartY.splice(lines - 1);
-            lineEndX.splice(lines - 1);
-            lineEndY.splice(lines - 1);
-
-            lineStartDx.splice(lines);
-            lineStartDy.splice(lines);
-            lineEndDx.splice(lines);
-            lineEndDy.splice(lines);
-        }
+        lineStartDx.push(random(0, 5));
+        lineStartDy.push(random(0, 5));
+        lineEndDx.push(random(0, 5));
+        lineEndDy.push(random(0, 5));
     }
+    if (mouseX > 50 && mouseX < 100 && mouseY > 0 && mouseY < 50) {
+        lines = lines - 1
+        lineStartY
+        lineStartY.splice(lines - 1);
+        lineEndX.splice(lines - 1);
+        lineEndY.splice(lines - 1);
+
+        lineStartDx.splice(lines);
+        lineStartDy.splice(lines);
+        lineEndDx.splice(lines);
+        lineEndDy.splice(lines);
+    }
+}
 
