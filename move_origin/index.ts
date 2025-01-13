@@ -5,16 +5,14 @@ function setup() {
   createCanvas(SIZE, SIZE);
   background("black");
 
+  for(let i=0; i<400; i+= CIRCLE_DIAMETER){
   strokeWeight(3);
   stroke("yellow");
   noFill();
 
-  
-  for (let x= CIRCLE_DIAMETER; x <SIZE; x+= 30){
-    stroke("yellow");
-    circle(0, 0, 50);
-    
-    translate(CIRCLE_DIAMETER, 50);
+  circle(i, i, CIRCLE_DIAMETER);
   }
-}
 
+
+ 
+}
