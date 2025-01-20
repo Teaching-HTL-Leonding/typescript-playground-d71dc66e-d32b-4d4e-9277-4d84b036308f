@@ -1,6 +1,7 @@
 function setup() {
-    
+    // We have a square canvas. The side length is defined by the constant SIZE.
     const SIZE = 400;
+    // Your job is to draw a grid on the canvas. The distance between the grid lines is defined by the constant GRID.
     const GRID = 25;
 
     createCanvas(SIZE, SIZE);
@@ -9,15 +10,16 @@ function setup() {
     strokeWeight(0.25);
     stroke("lightgray");
 
-    let i = GRID;
-    while (i < SIZE) {
-        line(i, 0, i, SIZE);
+    for(let i = GRID; i<SIZE; i++){
+        line(i, 0, i, SIZE); 
         i += GRID;
     }
+    for(let i = GRID; i<SIZE; i++){
+        line(0, i, SIZE, i); 
+        i += GRID;
+    }
+    
+   
 
-    i = GRID;
-    while (i < SIZE) {
-        line(0, i, SIZE, i);
-        i += GRID;
-    }
+    
 }
