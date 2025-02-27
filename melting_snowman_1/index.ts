@@ -1,63 +1,34 @@
-const MAX_WRONG_GUESSES = 10;
-const wordToGuess = "Winterwald";
-let currentWordStatus: string;
-let font: any;
-let wrongGuesses = 0;
-let acceptKeys = true;
-
-function preload() {
-    font = loadFont("https://cddataexchange.blob.core.windows.net/images/SyneMono-Regular.ttf");
-}
+let numberOfKeypresses = 0;
+let wordToGuess= "Winterwald";
 
 function setup() {
-    currentWordStatus = getInitialCurrentWord(wordToGuess);
-
     createCanvas(800, 500);
     angleMode(DEGREES);
-
     redraw();
     noLoop(); 
 }
 
 function draw() {
     background("white");
+    drawSnowman(numberOfKeypresses);
 
-    if (currentWordStatus === wordToGuess) {
-        acceptKeys = false;
-        drawResult(true, wrongGuesses);
-    } else if (wrongGuesses === MAX_WRONG_GUESSES) {
-        acceptKeys = false;
-        drawResult(false, wrongGuesses);
-    } else {
-        drawSnowman(wrongGuesses);
-        drawCurrentWordStatus(font, currentWordStatus);
-    }
-
+    stroke("blue");
+    strokeWeight(3);
+    line(200, 200, 250, 200);
+    line(260, 200, 310, 200);
+    line(320, 200, 370, 200);
+    line(380, 200, 430, 200);
+    line(440, 200, 490, 200);
+    line(200, 200, 250, 200);
+    line(200, 200, 250, 200);
+    line(200, 200, 250, 200);
+    line(200, 200, 250, 200);
+    line(200, 200, 250, 200);
 }
 
 function keyPressed() {
-    if (!acceptKeys) { return; }
+    numberOfKeypresses++;
 
-    // Handle guess
-    const newCurrentWordStatus = guessKey(key, wordToGuess, currentWordStatus);
-    if (currentWordStatus === newCurrentWordStatus) {
-        wrongGuesses++;
-    }
-    currentWordStatus = newCurrentWordStatus;
-
+    drawSnowman(numberOfKeypresses);
     redraw();
-}
-
-function drawCurrentWordStatus(font: any, currentWordStatus: string) {
-    push();
-    textAlign(LEFT, BOTTOM);
-    translate(225, 0);
-
-    // Draw current word status
-    fill("dodgerblue");
-    noStroke();
-    textSize(45);
-    textFont(font);
-    text(currentWordStatus, 0, 250);
-    pop();
 }
